@@ -3,7 +3,7 @@ const authRoutes = require('./auth-routes');
 const profileRoutes = require('./profile-routes');
 
 routes.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {user: req.user});
 }); 
 
 routes.use('/auth', authRoutes);
